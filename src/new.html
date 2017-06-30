@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <link rel="stylesheet" href="./css/tes.min.css">
+    </head>
+    <body>
+        <p>Hi saya dari tag html</p>
+
+        <div class="nama">
+            <p>Frontend Dev</p>
+        </div>
+
+        <template class="nama-template">
+            <h1>Kelas Ongis School</h1>
+            <p>Tes</p>
+        </template>
+
+        <script type="text/javascript">
+            var host = document.querySelector('p');
+            var root = host.createShadowRoot();
+            root.textContent = "Saya dari tag shadow dom !";
+        </script>
+        
+        <script>
+            var namahost = document.querySelector('.nama');
+            var namaroot = namahost.createShadowRoot();
+            var namatemplate = document.querySelector('.nama-template');
+            root.appendChild(document.importNode(namatemplate.content,true));
+        </script>
+
+    </body>
+</html>

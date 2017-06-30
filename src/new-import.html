@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML IMPORT</title>
+        <link rel="import" href="./html/v-header.html">
+        <link rel="stylesheet" href="./css/tes.min.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var link = document.querySelector('link[rel="import"]');
+            var content = link.import;
+            var element = content.querySelector('header');
+            document.body.appendChild(element.cloneNode(true));
+        </script>    
+    </body>
+</html>

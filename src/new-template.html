@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Html Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div>
+            <button onclick="buatTemplate()">
+                Buat Template Baru
+            </button>
+            
+            <section>
+            </section>
+
+            <template>
+                <div>Template yang saya pakai : 
+                    <span>0</span>
+                </div>
+                <script type="text/javascript">
+                    alert('Berhasil Ditambahkan')
+                </script>
+            </template>
+
+            <script>
+                function buatTemplate(){
+                    var content = document.querySelector('template').content;
+                    var span  = content.querySelector('span');
+                    span.textContent = parseInt(span.textContent) + 1;
+                    document.querySelector('section').appendChild(document.importNode(content,true));
+                }
+            </script>
+
+        </div>
+    </body>
+</html>
