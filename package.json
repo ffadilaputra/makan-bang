@@ -4,11 +4,13 @@
   "description": "Ini Boilerplate Keren",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": {
-    "name":"Ivan Fadila Putra",
-    "homepage":"http://ivan.org"
+    "name": "Ivan Fadila Putra",
+    "homepage": "http://ivan.org"
   },
   "license": "MIT",
   "devDependencies": {
@@ -40,7 +42,8 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-watch": "^4.3.11",
     "gulp-zip": "^4.0.0",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "snyk": "^1.189.0"
   },
   "keywords": [
     "Task",
@@ -52,5 +55,6 @@
     "HTML",
     "Import",
     "Template"
-  ]
+  ],
+  "snyk": true
 }
